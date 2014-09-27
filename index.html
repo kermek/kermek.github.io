@@ -7,46 +7,31 @@
         <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
 		<link rel='stylesheet' href='./stylesheets/styles.css'>
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kite+One">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica">
         <script src='./scripts/error.js'></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="./scripts/jquery.quicksand.js"></script>
+		<script type="text/javascript" src="./bower_components/jquery/jquery.js"></script>
+		<script type="text/javascript" charset="utf-8" src="./bower_components/quicksand/jquery.quicksand.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="./scripts/sorting.js"></script>
     </head>
     <body>
-	  <div id="w">
-		<div class="sort" id="sort"><span class="label">Filter By:</span> <a href="#" class="all selected">All</a> <a href="#" class="web">Web</a> <a href="#" class="js">JavaScript</a> <a href="#" class="java">Java</a></div>
+        <header>
+            <h1>my portfolio</h1>
+            <h2>by yermek kadyrbayev</h2>
+        </header>
+		<div id="w">
+		<div class="sort" id="sort">
+			<span class="label">Filter By:</span>
+			<a href="#" class="all selected">All</a>
+			<a href="#" class="js">JavaScript</a>
+			<a href="#" class="test">Test</a>
+			<a href="#" class="java">Java</a></div>
 		
 		<ul class="portfolio clearfix">
-		  <li data-id="id-1" class="js"><a href="./gauss/templates/gauss_latex.html" target="_blank"><img src="images/js-app-ui-01.png" class="portimg"></a></li>
-		  <!--
-		  <li data-id="id-2" class="java"><a href="" target="_blank"><img src="images/print-design-cards.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-5" class="web"><a href="" target="_blank"><img src="images/website-layout-header.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-3" class="js"><a href="" target="_blank"><img src="images/ios-app-ui-02.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-4" class="java"><a href="" target="_blank"><img src="images/print-winery-card.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-6" class="web"><a href="" target="_blank"><img src="images/website-base-header.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-7" class="java"><a href="" target="_blank"><img src="images/print-cyan-announcement-cards.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-8" class="web"><a href="" target="_blank"><img src="images/website-logo-header-image.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-9" class="js"><a href="" target="_blank"><img src="images/ios-ipad-app-03.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-10" class="js"><a href="" target="_blank"><img src="images/ios-tabbar-app-04.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-11" class="web"><a href="" target="_blank"><img src="images/website-dropdown-nav-menu.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-12" class="web"><a href="" target="_blank"><img src="images/website-restaurant-navigation-icons.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-13" class="js"><a href="" target="_blank"><img src="images/ios-app-ui-05.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-14" class="web"><a href="" target="_blank"><img src="images/website-footer-layout-design.png" class="portimg"></a></li>
-		  
-		  <li data-id="id-15" class="web"><a href="" target="_blank"><img src="images/website-shop-flowers-navigation.png" class="portimg"></a></li>
-		  -->
+		  <li data-id="id-1" class="js"><a href="./templates/gauss_latex.html" target="_blank"><img src="./images/js-app-ui-01.png" class="portimg"></a></li>
+		  <li data-id="id-2" class="test"><a href="./templates/gauss_test.html" target="_blank"><img src="./images/test-app-ui-02.png" class="portimg"></a></li>
+		  <li data-id="id-5" class="js"><a href="" target="_blank"><img src="./images/uc.png" class="portimg"></a></li>
+		  <li data-id="id-3" class="java"><a href="" target="_blank"><img src="./images/uc.png" class="portimg"></a></li>
 		</div>
 	  </div>
 	</body>

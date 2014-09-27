@@ -1,0 +1,70 @@
+h1 {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+
+}
+p {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 1em;
+}
+ol {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 1em;
+}
+td
+{
+    width: 50px;
+    text-align: right;
+}
+.b-form__table
+{
+    width: 550px;
+	align: center;
+    text-align: center;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.b-form__table td
+{
+    width:  50px;
+    text-align: center;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+input
+{
+    size: '3';
+    width: 50px;
+    text-align: right;
+}
+.b-form__button_table
+{
+    width: 550px;
+}
+.b-form__ok_button
+{
+    float: right;
+}
+#solution
+{
+    display: inline;
+    float: left;
+}
+.b-form__solution_table
+{
+    display: inline;
+    float: left;
+}
+#vectors
+{
+    display: inline;
+    float: left;
+}
+.b-form__vectors_table
+{
+    display: inline;
+    float: left;
+}

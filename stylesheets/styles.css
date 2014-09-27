@@ -11,6 +11,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   box-sizing: border-box;
 }
 html { height: 101%; }
+h1{
+	font-family: 'Pacifico', Arial, sans-serif;
+	padding-top: 65px;
+	font-size: 4em;
+	color: #444; 
+	text-align: center;
+}
+h2{
+	font-family: 'Economica', Arial, sans-serif;
+	font-size: 2em;
+	line-height: 3em;
+	color: #444; 
+	text-align: center;
+}
+
 body { font-size: 62.5%; line-height: 1; font-family: Arial, Verdana, sans-serif; padding-bottom: 65px; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }

@@ -1,0 +1,27 @@
+{
+  "name": "kermek.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kermek/kermek.github.io",
+  "authors": [
+    "kermek <kek277@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.8.2",
+    "quicksand": "~1.2.2",
+    "MathJax": "~2.4.0",
+    "fraction.js": "https://github.com/ekg/fraction.js.git",
+    "qunit": "https://github.com/jquery/qunit.git#~1.15.0"
+  },
+  "resolutions": {
+    "jquery": "1.8.2",
+    "fraction.js": "81ee23ece8"
+  }
+}

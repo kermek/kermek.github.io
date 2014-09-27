@@ -1,0 +1,14 @@
+{
+  "name": "fraction.js",
+  "homepage": "https://github.com/ekg/fraction.js",
+  "_release": "81ee23ece8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "81ee23ece804ce89c9b4021d0b0eb4dbbaf83db0"
+  },
+  "_source": "https://github.com/ekg/fraction.js.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/ekg/fraction.js.git",
+  "_direct": true
+}
