@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MathJax MathML Test Page</title>
+    <!-- Copyright (c) 2010-2014 The MathJax Consortium -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>
+    <script type="text/javascript" src="../scripts/fraction.js"></script>
+    <!--
+<script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+    -->
+</head>
+
+<body>
+    <form action='?' method='get' id='form1'>
+        <p>
+            System of linear equations:
+        </p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mfenced open='{' close="">
+                <mtable>
+                    <mtr>
+                        <mtd>
+                            <mrow>
+                                <mn>3</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mn>2</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>3</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>4</mn>
+                                </msub>
+                                <mo>=</mo>
+                                <mn>-2</mn>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mrow>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>-</mo>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mn>4</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>3</mn>
+                                </msub>
+                                <mo>-</mo>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>4</mn>
+                                </msub>
+                                <mo>=</mo>
+                                <mn>-1</mn>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mrow>
+                                <mn>-2</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>-</mo>
+                                <mn>2</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>-</mo>
+                                <mn>3</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>3</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>4</mn>
+                                </msub>
+                                <mo>=</mo>
+                                <mn>9</mn>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd>
+                            <mrow>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mn>5</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo>-</mo>
+                                <mn></mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>3</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mn>2</mn>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn>4</mn>
+                                </msub>
+                                <mo>=</mo>
+                                <mn>4</mn>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                </mtable>
+            </mfenced>
+        </math>
+        <br>
+        <input type='button' value='Ok' class='b-form__button'>
+        <p>Solution:
+        </p>
+        <div id='solution'>
+        </div>
+        <div id='LaTeX'>
+        </div>
+    </form>
+</body>
+<script type='text/javascript' src='../scripts/jquery-2.1.1.min.js'></script>
+<script>
+    //Data
+    var b = $('#form1');
+    b.s = b.find('#solution');
+    b.l = b.find('#LaTeX');
+    b.button = b.find('.b-form__button');
+    b.math = $('<math xmlns="http://www.w3.org/1998/Math/MathML">');
+    b.mfenced = $('<mfenced>');
+    b.mtable = $('<mtable>');
+    b.mtr = $('<mtr>');
+    b.mtd = $('<mtd>');
+    b.mrow = $('<mrow>');
+    b.mn = $('<mn>');
+    b.mi = $('<mi>');
+    b.mo = $('<mo>');
+    b.msub = $('<msub>');
+    //Logic
+    solve = function () {
+        var math = b.math.clone();
+        var mfenced = b.mfenced.clone();
+        var mtable = b.mtable.clone();
+        var mo = b.mo.clone();
+        var mtr, mtd, mn;
+
+        mtable.attr('columnlines', 'none none none solid');
+        mfenced.attr('(');
+        mfenced.attr('close', ')');
+        for (var i = 0; i < 4; i++) {
+            mtr = b.mtr.clone();
+            for (var j = 0; j < 5; j++) {
+                mtd = b.mtd.clone();
+                mrow = b.mrow.clone();
+                mn = b.mn.clone();
+                mtr.append(mtd.append(mrow.append(mn.append(i * 5 + j))));
+            }
+            mtable.append(mtr);
+        }
+        b.s.append(math.append(mfenced.append(mtable)));
+        
+        b.s.append(mo.append('=>'));
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub,"solution"])
+        var sle =  '$$\\begin{cases} 3x_1 + 2x_2 + x_3 + x_4 = -2 \\\\ x_1 - x_2 + 4x_3 - x_4 - \\frac{1}{3} \( 3x_1 + 2x_2 + x_3 + x_4 \) = -1 - \\frac{1}{3}(-2) \\\\ -2x_1 - 2x_2 - 3x_3 + x_4 = 9 \\\\ x_1 + 5x_2 - x_3 + 2x_4 = 4 \\end{cases}\\Rightarrow$$';
+        b.l.append(sle);
+        var sle =  '$$\\begin{cases}' + new Fraction(3) + 'x_1 + 2x_2 + x_3 + x_4 = -2 \\\\ x_1 - x_2 + 4x_3 - x_4 - \\frac{1}{3} \( 3x_1 + 2x_2 + x_3 + x_4 \) = -1 - \\frac{1}{3}(-2) \\\\ -2x_1 - 2x_2 - 3x_3 + x_4 = 9 \\\\ x_1 + 5x_2 - x_3 + 2x_4 = 4 \\end{cases}\\Rightarrow$$';
+        b.l.append(sle);
+MathJax.Hub.Queue(["Typeset",MathJax.Hub,"LaTeX"])
+        console.log(reduce(2, 4));
+    }
+    function reduce(numerator,denominator){
+        var gcd = function gcd(a,b){
+                    return b ? gcd(b, a%b) : a;
+                    };
+        gcd = gcd(numerator,denominator);
+    return [numerator/gcd, denominator/gcd];
+}
+    //Events
+    b.button.click(solve);
+</script>
+
+</html>
