@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            My Simple Portfolio
-        </title>
-        <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
-		<link rel='stylesheet' href='./stylesheets/styles.css'>
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kite+One">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica">
-        <script src='./scripts/error.js'></script>
-		<script type="text/javascript" src="./bower_components/jquery/jquery.js"></script>
-		<script type="text/javascript" charset="utf-8" src="./bower_components/quicksand/jquery.quicksand.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="./scripts/sorting.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>my portfolio</h1>
-            <h2>by yermek kadyrbayev</h2>
-        </header>
-		<div id="w">
-		<div class="sort" id="sort">
-			<span class="label">Filter By:</span>
-			<a href="#" class="all selected">All</a>
-			<a href="#" class="js">JavaScript</a>
-			<a href="#" class="test">Test</a>
-			<a href="#" class="java">Java</a></div>
-		
-		<ul class="portfolio clearfix">
-		  <li data-id="id-1" class="js"><a href="./templates/gauss_latex.html" target="_blank"><img src="./images/js-app-ui-01.png" class="portimg"></a></li>
-		  <li data-id="id-2" class="test"><a href="./templates/gauss_test.html" target="_blank"><img src="./images/test-app-ui-02.png" class="portimg"></a></li>
-		  <li data-id="id-5" class="js"><a href="" target="_blank"><img src="./images/uc.png" class="portimg"></a></li>
-		  <li data-id="id-3" class="java"><a href="" target="_blank"><img src="./images/uc.png" class="portimg"></a></li>
-		</div>
-	  </div>
-	</body>
+
+<head>
+    <title>
+        My Simple Portfolio
+    </title>
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
+    <link rel='stylesheet' href='./stylesheets/styles.css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Kite+One">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica">
+    <script src='./scripts/error.js'></script>
+    <script type="text/javascript" src="./bower_components/jquery/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./bower_components/quicksand/jquery.quicksand.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./scripts/sorting.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-55317002-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>my portfolio</h1>
+        <h2>by yermek kadyrbayev</h2>
+    </header>
+    <div id="w">
+        <div class="sort" id="sort">
+            <span class="label">Filter By:</span>
+            <a href="#" class="all selected">All</a>
+            <a href="#" class="js">JavaScript</a>
+            <a href="#" class="test">Test</a>
+            <a href="#" class="java">Java</a>
+        </div>
+
+        <ul class="portfolio clearfix">
+            <li data-id="id-1" class="js">
+                <a href="./templates/gauss_latex.html" target="_blank">
+                    <img src="./images/js-app-ui-01.png" class="portimg">
+                </a>
+            </li>
+            <li data-id="id-2" class="test">
+                <a href="./templates/gauss_test.html" target="_blank">
+                    <img src="./images/test-app-ui-02.png" class="portimg">
+                </a>
+            </li>
+            <li data-id="id-5" class="js">
+                <a href="" target="_blank">
+                    <img src="./images/uc.png" class="portimg">
+                </a>
+            </li>
+            <li data-id="id-3" class="java">
+                <a href="" target="_blank">
+                    <img src="./images/uc.png" class="portimg">
+                </a>
+            </li>
+    </div>
+    </div>
+</body>
+
 </html>
